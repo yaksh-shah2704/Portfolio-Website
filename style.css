@@ -61,7 +61,7 @@ section {
     transform: scale(1.05);
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.9rem;
     color: var(--bg-color);
     margin-left: 4rem;
@@ -99,17 +99,19 @@ section {
 
 .home-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color);
+        0 0 35px var(--main-color),
+        0 0 45px var(--main-color);
 }
 
 @keyframes floatImage {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-2.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -202,8 +204,9 @@ span {
 
 .about-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color);;
+        0 0 35px var(--main-color),
+        0 0 45px var(--main-color);
+    ;
 }
 
 .heading {
@@ -308,6 +311,9 @@ span {
     flex-direction: column;
     overflow: hidden;
     overflow-x: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, rgb(0, 0, 0) 96%, var(--main-color));
+    -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
 }
 
 .projects .heading {
@@ -320,40 +326,34 @@ span {
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    overflow: hidden;
-}
-
-.wrapper:hover {
-  animation-play-state: paused;
+.projects .wrapper:hover {
+    animation-play-state: paused;
+    cursor: grab;
 }
 
 .projects .wrapper {
-  display: flex;
-  gap: 3.5rem;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: scrollLeft 80s linear infinite;
-  width: max-content;
-  /* will-change: transform; */
+    display: flex;
+    gap: 3.5rem;
+    padding: 2rem 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scrollLeft 80s linear infinite;
+    width: fit-content;
 }
 
 .project-item {
     width: 350px;
     height: 300px;
     max-width: 350px;
-    background: var(--bg-color);
-    border: 3px solid var(--main-color);
-    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.07); 
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
     margin: 0;
     padding: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
     color: var(--text-color);
@@ -362,6 +362,9 @@ span {
     box-sizing: border-box;
     text-align: center;
     flex: 0 0 auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .project-item:hover {
@@ -395,33 +398,35 @@ span {
 }
 
 .dots {
-  text-align: center;
-  margin-top: 2rem;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 6px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background: linear-gradient(135deg, var(--main-color), var(--snd-bg-color));
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.3s, background 0.4s;
+    cursor: pointer;
 }
 
 .dot.active {
-  background-color: var(--main-color);
+    transform: scale(1.4);
+    background-color: var(--main-color);
 }
 
 
 @keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Contact Section */
@@ -483,14 +488,6 @@ span {
     text-align: center;
 }
 
-/* .h {
-    color: rgb(3, 161, 3);
-    margin-top: 10px;
-    display: none;
-    font-size: 3.2rem;
-    font-weight: 600;
-} */
-
 /* Footer Section */
 
 .footer {
@@ -535,6 +532,19 @@ span {
     color: var(--text-color);
 }
 
+.footer>#btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
 /* Responsive Design */
 
 @media (max-width: 1200px) {
@@ -547,18 +557,23 @@ span {
     .header {
         padding: 2rem 3%;
     }
+
     section {
         padding: 10rem 3%;
     }
+
     .services {
         padding: 7rem;
     }
+
     .projects .wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .contact form .input-box input {
         width: 100%;
     }
+
     .footer {
         padding: 2rem 3%;
     }
@@ -568,6 +583,7 @@ span {
     #menu-icon {
         display: block;
     }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -580,38 +596,48 @@ span {
         transition: all 0.5s ease;
         backdrop-filter: blur(10px);
     }
+
     .navbar a {
         display: block;
         padding: 17px;
         font-size: 22px;
     }
+
     .navbar.active {
         right: 0;
     }
+
     .home {
         flex-direction: column;
     }
+
     .home-content h3 {
         font-size: 2.6rem;
     }
+
     .home-content h1 {
         font-size: 5rem;
     }
+
     .home-content {
         order: 2;
         margin-left: 1rem;
     }
+
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
     }
+
     .about {
         flex-direction: column-reverse;
     }
+
     .about-img img {
         width: 70vw;
         margin-top: 4rem;
     }
+
     .services {
         margin-bottom: 3rem;
     }
@@ -622,6 +648,7 @@ span {
         width: 70vw;
         margin-top: 8rem;
     }
+
     .about-img img {
         width: 70vw;
         margin-top: 4rem;

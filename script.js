@@ -10,6 +10,8 @@ const dots = document.querySelectorAll('.dot');
 const totalProjects = 6;
 const animationDuration = 80000;
 let currentIndex = 0;
+const wrapper = document.querySelector('.projects .wrapper');
+wrapper.innerHTML += wrapper.innerHTML;
 
 
 menu.onclick = () => {
@@ -67,18 +69,8 @@ window.addEventListener("scroll", () => {
 function updateDot(index) {
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
-    //   index = (currentIndex + 1) % totalProjects;
 }
 setInterval(() => {
     currentIndex = (currentIndex + 1) % dots.length;
     updateDot(currentIndex);
 }, 5000);
-
-
-// const typed = new Typed('.multiple-text', {
-//     strings: ['Frontend Developer', 'Backend Developer', 'Full-Stack Developer', 'AI/ML Developer', 'Web Designer'],
-//     typeSpeed: 80,
-//     backSpeed: 80,
-//     backDelay: 1200,
-//     loop: true,
-// });
