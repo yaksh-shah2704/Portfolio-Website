@@ -37,8 +37,8 @@ portfolio-website/
 │
 ├── index.html          <i># Main website HTML</i>
 ├── style1.css          <i># Styling sheet</i>
-├── app.js              <i># JavaScript for interactivity</i>
-├── assets/             <i># Images, icons, animations</i>
+├── script.js              <i># JavaScript for interactivity</i>
+├── images/             <i># Images, icons, animations</i>
 └── README.md           <i># This documentation</i>
 </pre>
 
