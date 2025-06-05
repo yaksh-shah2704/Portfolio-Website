@@ -60,7 +60,7 @@ cd portfolio-website
 
 <h2>🌐 Live Demo</h2>
 
-<a href="https://your-portfolio-live-link.com](https://ephemeral-valkyrie-b45b75.netlify.app/" target="_blank">▶️ View Live Portfolio</a>
+<a href="https://ephemeral-valkyrie-b45b75.netlify.app/" target="_blank">▶️ View Live Portfolio</a>
 
 ---
 
@@ -78,7 +78,7 @@ cd portfolio-website
 
 <p>
   <strong>Yaksh Shah</strong><br/>
-  🌐 <a href="https://your-portfolio-link.com](https://ephemeral-valkyrie-b45b75.netlify.app/" target="_blank">Portfolio Website</a><br/>
+  🌐 <a href="https://ephemeral-valkyrie-b45b75.netlify.app/" target="_blank">Portfolio Website</a><br/>
   🐙 <a href="https://github.com/yaksh-shah2704" target="_blank">GitHub Profile</a><br/>
   ✉️ <a href="mailto:yakshahah2704@gmail.com">yakshahah2704@gmail.com</a>
 </p>
